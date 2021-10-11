@@ -95,6 +95,7 @@ main p {
 
 main p a {
   font-weight: 600;
+  white-space: nowrap;
 }
 
 ul.social {
@@ -120,6 +121,7 @@ ul.social :last-child {
 
 ul.social a {
   opacity: 0.6;
+  font-size: 22px;
 }
 
 ul.social a.link::before {
@@ -145,5 +147,55 @@ footer section a, footer section p {
   font-size: 12px;
   line-height: 140%;
   opacity: .4;
+}
+
+@media screen and (max-width: 620px) {
+  h1 {
+    font-size: 30px;
+  }
+  main p {
+    font-size: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main p a {
+    font-size: 24px;
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    margin-top: 20px;
+  }
+  main p a::before {
+    bottom: -1px !important;
+  }
+  ul.social a {
+    font-size: 16px;
+  }
+  ul.social {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  ul.social li {
+    margin: 0;
+  }
+  footer section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer section p {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+  header {
+    padding: 30px 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */
